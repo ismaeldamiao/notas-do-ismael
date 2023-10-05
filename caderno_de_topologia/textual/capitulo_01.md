@@ -1,0 +1,57 @@
+# Introdução à topologia
+
+## Definição: Espaço topológico
+
+Uma estrutura topológica é um par ordenado $(X, \mathscr V)$,
+onde $X$ é um conjunto com uma função $\mathscr V:X\rightarrow \wp(X)$
+que possui as seguintes propriedades.
+1.  Todo ponto mora em sua própria vizinhança.  
+    $\forall_{x\in X}\forall_{V\in \mathscr V(x)}(x \in V)$
+2.   Toda região que contém uma vizinhança também é uma vizinhança.  
+    $\forall_{x\in X}\forall_{V_1\in \mathscr V(x)}
+    \forall_{V_2\in \wp(X)}((V_1\subset V_2)\Rightarrow (V_2\in\mathscr V(x)))$
+3.  A intersecção de duas vizinhanças também é uma vizinhança.  
+    $\forall_{x\in X}\forall_{V_1\in \mathscr V(x)}
+    \forall_{V_2\in \mathscr V(x)}((V_1\cap V_2)\in \mathscr V(x))$
+    
+    O conjunto $X$ é chamado de **espaço topológico**
+    quando possui uma função com as propriedades acima,
+    tal função é chamada de função de vizinhança.
+    Um espaço topológico é um **espaço de Hausdorff**
+    se sua função de vizinhança também possui a seguinte propriedade.
+4.  Existem vizinhanças disjuntas para pontos distintos.  
+    $\forall_{x\in X}\forall_{y\in X}((x \neq y)\Rightarrow
+    \exists_{V_1\in \mathscr V(x)}\exists_{V_2\in \mathscr V(y)}((V_1 \cap V_2) = \varnothing))$
+
+## Definição: Continuidade e homeomorfismo
+
+Sejam $(X, \mathscr V_X)$ e $(Y, \mathscr V_Y)$ estruturas topológicas.
+
+*   Diz-se que uma função $f:X\rightarrow Y$ é contínua em $a\in X$ quando
+a imagem das vizinhanças de $a$ são vizinhanças de $f(a)$, isto é, quando
+$$
+\forall_{V\in\mathscr V_X(a)}
+(\{y\in Y ~\vert~ \exists_{x\in V}
+(y = f(x))\} \in\mathscr V_Y\circ f(a)).
+$$
+*   Diz-se que $f$ é um **homeomorfismo** quando é contínua, bijetiva e sua inversa também é contínua.
+*   Diz-se que $X$ e $Y$ são homeomorfos quando existe algum homeomorfismo de $X$ para $Y$.
+
+## Estruturas algébricas
+
+Diz-se que um conjunto $X$ é um monóide topológico se possui as seguintes propriedades.
+1.  Existe uma estrutura de monóide $(X, \mathfrak m)$.
+2.  Existe uma estrutura topológica $(X, \mathscr V_X)$.
+3.  $\mathfrak m$ é contínua.
+
+Diz-se que um conjunto $X$ é um grupo topológico se possui as seguintes propriedades.
+1.  Existe uma estrutura de grupo $(X, \mathfrak g)$.
+2.  Existe uma estrutura topológica $(X, \mathscr V_X)$.
+3.  $\mathfrak g$ é contínua.
+
+Diz-se que um conjunto $X$ é um espaço vetorial topológico se possui as seguintes propriedades.
+1.  Existe uma estrutura vetorial $(X, \mathfrak s, \mathbb F, \mathfrak m)$.
+2.  Existe uma estrutura topológica $(X, \mathscr V_X)$.
+3.  $\mathfrak s$ e $\mathfrak m$ são contínuas.
+
+Etc...
