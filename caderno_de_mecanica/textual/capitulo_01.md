@@ -2,36 +2,71 @@
 
 ## Introdução
 
-**Sistema de coordenadas em $\mathcal V_3$:**
-Um observador (referencial) está sempre em
-um lugar do espaço,
-em alguma vizinhança $V\subset\mathcal V_3$
-desse observador ele consergue definir
-cartas
-que denotarei nesse caderno por
-${(x^1, x^2, x^3):V\rightarrow\mathbb R^3}$,
-o observador chama as funções $x^i$ de
-coordenadas.
+Para o estudo da dinâmica dos corpos
+é necessário entender, sem definição,
+os conceitos de espaço, tempo e posição
+(e também de coordenadas,
+na vizinhança do observador).
+*   **Espaço:**
+    O espaço é a variedade $\mathcal V_3$,
+    de todas as possíveis posições.
+*   **Posição:**
+    Em cada instante $t$
+    a posição de um corpo no espaço é
+    $x(t)\in\mathcal V_3$.
+    O mapa
+    $x:
+    t\mapsto x(t)$
+    é chamada de trajetória do corpo.
+    É de notar-se que $x$ é
+    um caminho em $\mathcal V_3$.
+*   **Sistema de coordenadas em $\mathcal V_3$:**
+    Um observador (referencial) está sempre em
+    um lugar do espaço.
+    Em alguma vizinhança $V\subset\mathcal V_3$
+    desse observador ele consergue definir
+    cartas
+    que denotarei nesse caderno por
+    ${(x^1, x^2, x^3):V\rightarrow\mathbb R^3}$,
+    o observador chama as funções $x^i$ de
+    coordenadas.
 
-**Sistema de coordenadas em $T(\mathcal V_3)$:**
-O mesmo observador consegue definir cartas em
-$T(V) \subset T(\mathcal V_3)$,
-de fato ele pode tomar
-$$
-\begin{cases}
-{v^i:T(V)\rightarrow\mathbb R:X\mapsto dx^i(X)} \\
-{\xi^i:T(V)\rightarrow\mathbb R:X\mapsto x^i\circ\pi(X)},
-\end{cases}
-$$
-onde $\pi:T(\mathcal V_3)\rightarrow\mathcal V_3$
-é a projeção do fibrado tangente.
-Ele chama a função $v^i$ de
-velocidade associada à coordenada $x^i$
-e às funções
-$\xi^i$ também chama de coordenadas.
+Algumas construções básicas
+são feitas utilizando os conceitos primitivos:
+*   **Velocidade:**
+    A velocidade $v(t)\in T_{x(t)}(\mathcal V_3)$
+    de um corpo no instante $t$ é
+    definida pelo mapa
+    ${v:t\mapsto v(t) = \frac{d}{dt} x(t)}$.
+    É de notar-se que $v$ é
+    um caminho em $T(\mathcal V_3)$
+*   **Sistema de coordenadas em $T(\mathcal V_3)$:**
+    O mesmo observador consegue definir cartas em
+    $T(V) \subset T(\mathcal V_3)$,
+    de fato ele pode tomar
+    $$
+    \begin{cases}
+    {v^i:T(V)\rightarrow\mathbb R:X\mapsto dx^i(X)} \\
+    {\xi^i:T(V)\rightarrow\mathbb R:X\mapsto x^i\circ\pi(X)},
+    \end{cases}
+    $$
+    onde $\pi:T(\mathcal V_3)\rightarrow\mathcal V_3$
+    é a projeção do fibrado tangente.
+    Ele chama a função $v^i$ de
+    componente da velocidade
+    associada à coordenada $x^i$
+    e às funções
+    $\xi^i$ também chama de coordenadas.
 
+    Note-se que a velocidade de um corpo
+    movendo-se na vizinhança do observador é
+    $$
+    v(t) =
+    \sum_{i=1}^3 v^i\circ v(t)
+    ~ \hat x_i|_{x(t)}.
+    $$
 
-## O Espaço
+## Os postulados de Euclides-Riemann
 
 ## Definição: Trajetória
 
