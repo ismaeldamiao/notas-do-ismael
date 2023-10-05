@@ -120,6 +120,7 @@ $$
 ## Equanções da velocidade
 
 Seja...
+$\eta^{ij} = \eta^*(dx^i, dx^j)$...
 
 >   Para um corpo movendo-se na
 >   vizinhança de um observador
@@ -127,7 +128,33 @@ Seja...
 >   sistema de coordenadas arbitrário
 >   tem-se que
 >   $$
-\dot q^i = \frac{1}{m} \eta^{ij} p_j
+\dot q^i = \frac{1}{m}\sum_{j=1}^3 \eta^{ij} p_j
+$$
+
+Cálculo:
+$$
+\begin{aligned}
+\frac{d}{dt} q^i\circ p(t) &=
+\frac{d}{dt} x^i\circ\pi\circ p(t) \\
+&= \frac{d}{dt} x^i\circ x(t) \\
+&= v^i\circ v(t) \\
+&= v^i\left(\frac{1}{m(t)} \eta^{\sharp} \circ p(t) \right)\\
+&= \frac{1}{m(t)} p_j\circ p(t) v^i\circ\eta^{\sharp}(dx^j|_{x(t)}) \\
+&= \frac{1}{m(t)} p_j\circ p(t) \eta_{x(t)}(\eta^{\sharp}(dx^i|_{x(t)}, \eta^{\sharp}(dx^j|_{x(t)})) \\
+&= \frac{1}{m(t)} \eta^{ij}\circ x(t) ~ p_j\circ p(t)
+\end{aligned}
+$$
+Q.E.D.
+
+## Equações do movimento geodésico
+
+>   Para um corpo movendo-se na
+>   vizinhança de um observador
+>   que utiliza um
+>   sistema de coordenadas arbitrário
+>   tem-se que
+>   $$
+\dot p^i = -\frac{1}{2m}\sum_{j=1}^3\sum_{k=1}^3 p_j p_k \frac{\partial}{\partial q^i} \eta^{jk}
 $$
 
 ## A força de inércia
