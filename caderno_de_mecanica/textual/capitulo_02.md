@@ -16,6 +16,27 @@ $\pi$ é a projeção $\pi:T^*\mathcal V_3\rightarrow\mathcal V_3$.
 Ao estudar a órbita de um corpo, bem como suas causas,
 deve-se determinar sua trajetória.
 
+## Introdução
+
+**Sistema de coordenadas em $T^*(\mathcal V_3)$:**
+O observador (referencial)
+também consegue definir cartas em
+${T^*(V) \subset T(\mathcal V_3)}$,
+de fato ele pode tomar
+${p_i:T^*(V)\rightarrow\mathbb R:
+\sigma\mapsto \sigma
+\left(\frac{\partial}{\partial x^i}\right)}$,
+ele chama a função $p_i$ de
+momento associado à coordenada $x^i$.
+Ele também define
+${q^i:T^*(V)\rightarrow\mathbb R:
+X\mapsto x^i\circ\pi(X)}$
+onde
+$\pi:T^*(\mathcal V_3)\rightarrow\mathcal V_3$
+é a projeção do fibrado cotangente,
+o observador também chama as funções
+$q^i$ de coordenadas.
+
 ## Definição: Massa
 
 Diz-se que um corpo possui massa se existe
