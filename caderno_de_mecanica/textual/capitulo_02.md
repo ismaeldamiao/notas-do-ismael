@@ -23,19 +23,22 @@ O observador (referencial)
 também consegue definir cartas em
 ${T^*(V) \subset T(\mathcal V_3)}$,
 de fato ele pode tomar
-${p_i:T^*(V)\rightarrow\mathbb R:
+$$
+\begin{cases}
+{p_i:T^*(V)\rightarrow\mathbb R:
 \sigma\mapsto \sigma
-\left(\frac{\partial}{\partial x^i}\right)}$,
-ele chama a função $p_i$ de
-momento associado à coordenada $x^i$.
-Ele também define
-${q^i:T^*(V)\rightarrow\mathbb R:
-X\mapsto x^i\circ\pi(X)}$
+\left(\frac{\partial}{\partial x^i}\right)} \\
+{q^i:T^*(V)\rightarrow\mathbb R:
+\sigma\mapsto x^i\circ\pi(\sigma)},
+\end{cases}
+$$
 onde
 $\pi:T^*(\mathcal V_3)\rightarrow\mathcal V_3$
-é a projeção do fibrado cotangente,
-o observador também chama as funções
-$q^i$ de coordenadas.
+é a projeção do fibrado cotangente.
+Ele chama a função $p_i$ de
+momento associado à coordenada $x^i$
+e às funções
+$q^i$ também chama de coordenadas.
 
 ## Definição: Massa
 

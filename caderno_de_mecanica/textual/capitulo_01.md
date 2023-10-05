@@ -17,16 +17,18 @@ coordenadas.
 O mesmo observador consegue definir cartas em
 $T(V) \subset T(\mathcal V_3)$,
 de fato ele pode tomar
-${v^i:T(V)\rightarrow\mathbb R:X\mapsto dx^i(X)}$,
-ele chama a função $v^i$ de
-velocidade associada à coordenada $x^i$.
-Ele também define
-${\xi^i:T(V)\rightarrow\mathbb R:
-X\mapsto x^i\circ\pi(X)}$
+$$
+\begin{cases}
+{v^i:T(V)\rightarrow\mathbb R:X\mapsto dx^i(X)} \\
+{\xi^i:T(V)\rightarrow\mathbb R:X\mapsto x^i\circ\pi(X)},
+\end{cases}
+$$
 onde $\pi:T(\mathcal V_3)\rightarrow\mathcal V_3$
-é a projeção do fibrado tangente,
-o observador também chama as funções
-$\xi^i$ de coordenadas.
+é a projeção do fibrado tangente.
+Ele chama a função $v^i$ de
+velocidade associada à coordenada $x^i$
+e às funções
+$\xi^i$ também chama de coordenadas.
 
 
 ## O Espaço
