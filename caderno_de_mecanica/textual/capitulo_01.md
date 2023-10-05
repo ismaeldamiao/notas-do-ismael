@@ -39,7 +39,7 @@ são feitas utilizando os conceitos primitivos:
     definida pelo mapa
     ${v:t\mapsto v(t) = \frac{d}{dt} x(t)}$.
     É de notar-se que $v$ é
-    um caminho em $T(\mathcal V_3)$
+    um caminho em $T(\mathcal V_3)$.
 *   **Sistema de coordenadas em $T(\mathcal V_3)$:**
     O mesmo observador consegue definir cartas em
     $T(V) \subset T(\mathcal V_3)$,
@@ -68,11 +68,23 @@ são feitas utilizando os conceitos primitivos:
 
 ## Os postulados de Euclides-Riemann
 
-## Definição: Trajetória
-
-## Espaço-tempo
-
 ## Geodésicas
+
+Uma geodésica é uma curva no espaço com
+velocidade constante e que
+minimiza a distância entre $x(t_0)$ e $x(t_f)$,
+isto é,
+que minimiza a integral
+$$
+L(x) = \int_{t_0}^{t_f}
+\sqrt{|\eta_{x(t)}(\dot x(t), \dot x(t))|} ~ dt,
+$$
+de acordo com [ref] essa integral é mínima se
+também é mínima a integral
+$$
+A(x) = \frac{1}{2} \int_{t_0}^{t_f}
+\eta_{x(t)}(\dot x(t), \dot x(t)) ~ dt,
+$$
 
 $$
 \ddot \xi^i +
