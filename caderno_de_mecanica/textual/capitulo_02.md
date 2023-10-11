@@ -41,6 +41,7 @@ utilizando o conceito primitivo:
       \frac{\eta^*_{x(t)}(p(t), p(t))}
       {\eta_{x(t)}(v(t), v(t))}
   \right\vert}.$$
+
   Daí vem a relação momento-velocidade,
   $$p(t) = m(t) ~ \eta^\flat\circ v(t).$$
   Note-se que essa relação não necessariamente
@@ -58,6 +59,7 @@ utilizando o conceito primitivo:
   {q^i:T^*(V)\rightarrow\mathbb R:
   \sigma\mapsto x^i\circ\pi(\sigma)},
   \end{cases}$$
+
   onde
   $\pi:T^*(\mathcal V_3)\rightarrow\mathcal V_3$
   é a projeção do fibrado cotangente.
@@ -67,7 +69,7 @@ utilizando o conceito primitivo:
   e às funções
   $q^i$ também chama de coordenadas.
 
-  Note-se que o momento de um corpo
+  O momento de um corpo
   movendo-se na vizinhança do observador é
   $$p(t) =
   \sum_{i=1}^3 p_i\circ p(t)
@@ -75,8 +77,8 @@ utilizando o conceito primitivo:
 
 ## Postulado: Princípio de inércia
 
->   *Todo corpo matém, no que depende dele, seu estado de repouso ou
->   movimento geodésico.*
+> *Todo corpo matém, no que depende dele, seu estado de repouso ou
+> movimento geodésico.*
 
 Assim, desde que a tragetória $x$ é uma geodésica
 se $\nabla_{v(t)} v(t) = 0$,
