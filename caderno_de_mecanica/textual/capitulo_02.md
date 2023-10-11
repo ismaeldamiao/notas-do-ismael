@@ -11,7 +11,7 @@ os conceitos de momento,
 ou quantidade de movimento, e força.
 * **Momento:**
   Em cada instante $t$ o momento linear
-  de um corpo é $p(t)\in T^{*}(\mathcal V)$.
+  de um corpo é $ˋp(t)\in T^{*}(\mathcal V)ˋ$.
   O caminho de fase do corpo é o mapa
   $p:t\mapsto p(t)$.
   É de notar-se que $p$ é
