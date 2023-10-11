@@ -1,20 +1,7 @@
 # Mecânica
 
-Na dinâmica, dado o espaço $\mathcal V_3$,
-a posição é um sistema de coordenadas em $\mathcal V_3$
-e a trajetória de um corpo é uma curva
-$\gamma:I\subset \mathbb R\rightarrow\mathcal V_3$.
-
-Para o estudo da mecânica a atenção é voltada também para
-o momento que, junto com a posição, forma um sistema de coordenadas
-no espaço cotangente $T^*\mathcal V_3$.
-A **órbita** de um corpo é uma curva
-$\gamma^\flat:I\subset \mathbb R\rightarrow T^*\mathcal V_3$
-tal que $\gamma(t) = \pi\circ\gamma^\flat(t)$, onde
-$\pi$ é a projeção $\pi:T^*\mathcal V_3\rightarrow\mathcal V_3$.
-
-Ao estudar a órbita de um corpo, bem como suas causas,
-deve-se determinar sua trajetória.
+Neste capítulo tomarei nota sobre as leis da mecânica de
+Newton...
 
 ## Introdução
 
@@ -22,13 +9,13 @@ Para o estudo da mecânica dos corpos
 é necessário entender, sem definição,
 os conceitos de momento,
 ou quantidade de movimento, e força.
-*   **Momento:**
-    Em cada instante $t$ o momento linear
-    de um corpo é $p(t)\in T^*(\mathcal V)$.
-    O caminho de fase do corpo é o mapa
-    $p:t\mapsto p(t)$.
-    É de notar-se que $p$ é
-    um caminho em $T^*(\mathcal V_3)$.
+* **Momento:**
+  Em cada instante $t$ o momento linear
+  de um corpo é $p(t)\in T^*(\mathcal V)$.
+  O caminho de fase do corpo é o mapa
+  $p:t\mapsto p(t)$.
+  É de notar-se que $p$ é
+  um caminho em $T^*(\mathcal V_3)$.
 *   **Força:**
     Uma força imprimida é uma ação exercida
     sobre um corpo com o fim
