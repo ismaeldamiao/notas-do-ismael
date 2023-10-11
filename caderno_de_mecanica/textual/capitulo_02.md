@@ -102,7 +102,7 @@ $\eta^{ij} = \eta^*(dx^i, dx^j)$...
 
 $$\begin{cases}
 \dot q^i &= \frac{1}{m}\sum_{j=1}^3 \eta^{ij} p_j \\
-\dot p_i &= m a_i + \frac{\dot m}{m} p_i - \frac{1}{2m} p_j p_k \frac{\partial}{\partial q}\eta^{jk}
+\dot p_i &= m a_i + \frac{\dot m}{m} p_i - \sum_{j=1}^3\sum_{k=1}^3\frac{1}{2m} p_j p_k \frac{\partial}{\partial q}\eta^{jk}
 \end{cases}$$
 
 Cálculo:
