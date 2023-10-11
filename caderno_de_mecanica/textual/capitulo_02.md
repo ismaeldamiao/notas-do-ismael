@@ -41,7 +41,6 @@ utilizando o conceito primitivo:
       \frac{\eta^*_{x(t)}(p(t), p(t))}
       {\eta_{x(t)}(v(t), v(t))}
   \right\vert}.$$
-
   Daí vem a relação momento-velocidade,
   $$p(t) = m(t) ~ \eta^\flat\circ v(t).$$
   Note-se que essa relação não necessariamente
@@ -59,7 +58,6 @@ utilizando o conceito primitivo:
   {q^i:T^*(V)\rightarrow\mathbb R:
   \sigma\mapsto x^i\circ\pi(\sigma)},
   \end{cases}$$
-
   onde
   $\pi:T^*(\mathcal V_3)\rightarrow\mathcal V_3$
   é a projeção do fibrado cotangente.
@@ -75,42 +73,37 @@ utilizando o conceito primitivo:
   \sum_{i=1}^3 p_i\circ p(t)
   ~ dx^i|_{x(t)}.$$
 
-## Postulado: Princípio de inércia
+## As leis de Newton
 
+**Postulado: Princípio de inércia**
 > *Todo corpo matém, no que depende dele, seu estado de repouso ou
 > movimento geodésico.*
 
-Assim, desde que a tragetória $x$ é uma geodésica
-se $\nabla_{v(t)} v(t) = 0$,
-então deve-se ter que
-$$
-\eta^\flat(\nabla_{v(t)} v(t)) = 0
-$$
-
-## Postulado: Princípio fundamental da dinâmica
-
->   *A mudança no momento é proporcional à força motora imprimida.*
+**Postulado: Princípio fundamental da dinâmica**
+> *A mudança no momento é proporcional à força motora imprimida.*
 
 Assim, em cada instante $t$ a força motora $F(t)\in TT^*\mathcal V_3$
 se relaciona com a órbita do corpo, em unidades de Newton,
-pela equação diferencial
+pela equação
 $$
 \frac{d}{dt}\gamma^\flat(t) = F(t).
 $$
 
-## Equanções da velocidade
+## Expressão local das leis de Newton
 
 Seja...
 $\eta^{ij} = \eta^*(dx^i, dx^j)$...
 
->   Para um corpo movendo-se na
->   vizinhança de um observador
->   que utiliza um
->   sistema de coordenadas arbitrário
->   tem-se que
->   $$
-\dot q^i = \frac{1}{m}\sum_{j=1}^3 \eta^{ij} p_j
-$$
+> Para um corpo movendo-se na
+> vizinhança de um observador
+> que utiliza um
+> sistema de coordenadas arbitrário
+> tem-se que
+
+$$\begin{cases}
+\dot q^i &= \frac{1}{m}\sum_{j=1}^3 \eta^{ij} p_j \\
+\dot p_i &= m a_i + \frac{\dot m}{m} p_i - \frac{1}{2m} p_j p_k \frac{\partial}{\partial q}\eta^{jk}
+\end{cases}$$
 
 Cálculo:
 $$
@@ -134,9 +127,6 @@ Q.E.D.
 >   que utiliza um
 >   sistema de coordenadas arbitrário
 >   tem-se que
->   $$
-\dot p^i = -\frac{1}{2m}\sum_{j=1}^3\sum_{k=1}^3 p_j p_k \frac{\partial}{\partial q^i} \eta^{jk}
-$$
 
 ## A força de inércia
 
