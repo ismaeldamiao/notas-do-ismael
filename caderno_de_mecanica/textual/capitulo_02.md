@@ -94,28 +94,52 @@ $$
 Seja...
 $\eta^{ij} = \eta^*(dx^i, dx^j)$...
 
+A componente $a_i(t)$ da aceleração no instante $t$
+é definida por
+
+$$a_i(t) = \frac{d}{dt}
+\sum_{j=1}^3\eta_{ij}\circ x(t) v^j\circ\dot x(t) -
+\left.\frac{\partial}{\partial \xi^i}\right|_{\dot x(t)}
+\sum_{j=1}^3\sum_{k=1}^3\frac{1}{2} v^j v^k \eta_{jk}$$
+
 > Para um corpo movendo-se na
 > vizinhança de um observador
 > que utiliza um
 > sistema de coordenadas arbitrário
-> tem-se que
+> tem-se que as fórmulas abaixo são satisfeitas.
 
-$$\begin{cases}
+$$\begin{aligned}
 \dot q^i &= \frac{1}{m}\sum_{j=1}^3 \eta^{ij} p_j \\
-\dot p_i &= m a_i + \frac{\dot m}{m} p_i - \sum_{j=1}^3\sum_{k=1}^3\frac{1}{2m} p_j p_k \frac{\partial}{\partial q}\eta^{jk}
-\end{cases}$$
+\dot p_i &= \frac{\dot m}{m} p_i + m a_i - \frac{\partial}{\partial q^i}\sum_{j=1}^3\sum_{k=1}^3\frac{1}{2m} p_j p_k \eta^{jk}
+\end{aligned}$$
+
+A equação para a velocidade, $\dot q^i$, é
+simplesmente a expressão local para a relação
+entre o momento e a velocidade.
+Já a expressão para a força, $\dot p_i$,
+possi três contribuições bastante interessantes,
+uma força é imprimida sobre o corpo se a massa deste mudar
+ou se ele acelerar, além disso uma força de inércia é perceptível
+se a expressão para o tesor métrico depender das coordenadas.
 
 Cálculo:
 $$
 \begin{aligned}
-\frac{d}{dt} q^i\circ p(t) &=
-\frac{d}{dt} x^i\circ\pi\circ p(t) \\
+\frac{d}{dt} q^i\circ p(t)
+&= \frac{d}{dt} x^i\circ\pi\circ p(t) \\
 &= \frac{d}{dt} x^i\circ x(t) \\
 &= v^i\circ v(t) \\
 &= v^i\left(\frac{1}{m(t)} \eta^{\sharp} \circ p(t) \right)\\
 &= \frac{1}{m(t)} p_j\circ p(t) v^i\circ\eta^{\sharp}(dx^j|_{x(t)}) \\
-&= \frac{1}{m(t)} p_j\circ p(t) \eta_{x(t)}(\eta^{\sharp}(dx^i|_{x(t)}, \eta^{\sharp}(dx^j|_{x(t)})) \\
 &= \frac{1}{m(t)} \eta^{ij}\circ x(t) ~ p_j\circ p(t)
+\end{aligned}
+$$
+
+
+$$
+\begin{aligned}
+\frac{d}{dt} p_i\circ p(t)
+&= \ldots
 \end{aligned}
 $$
 Q.E.D.
