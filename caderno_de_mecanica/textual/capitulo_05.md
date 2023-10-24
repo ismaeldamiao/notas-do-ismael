@@ -1,23 +1,30 @@
-# Eletromagnetismo clássico
+# Gravitação
 
-## Lei da força de Lorentz
+## Lei universal da gravitação
 
-Existem campos vetoriais
-$\vec E\in\mathfrak X(\mathcal V_4; T\mathcal V_3)$ e $\vec B\in\mathfrak X(\mathcal V_4; T\mathcal V_3)$,
-chamados respectivamente de campos elétrico e magnético,
-tais que a força $\vec F(t)$ no instante $t$ imprimida sobre um corpo rígido movendo-se em uma
-trajetória ${\gamma:\mathbb T\rightarrow\mathcal V_3}$ é
+## Gravitação clássica
 
-$$
-\vec F(t) \propto \vec E\circ\gamma(t) + \dot\gamma(t)\times\vec B\circ\gamma(t).
-$$
+### Postulado: Lei de Gaus
 
-## Leis de Gauss
-
-$$
-\operatorname{div}(\vec E) = \frac{Q}{\varepsilon_0}
+>   $$
+\operatorname{div}(\vec g) =
+-4\pi G \rho
 $$
 
+### Postulado: Conservação de energia
+
+>   $$
+\operatorname{rot}(\vec g) = 0
 $$
-\operatorname{div}(\vec B) = 0
-$$
+
+### Lema: Potencial gravitacional
+
+>   Existe um campo escalar $\Phi$,
+>   o potencial gravitacional, tal que
+>   $\vec g = -\operatorname{grad}(\Phi)$.
+
+Prova: Desde que
+$\operatorname{rot}(\vec g) =
+(\star d (\vec g^{~\flat}))^{\sharp}$,
+tem-se que
+$d (\vec g^{~\flat}) = 0$
