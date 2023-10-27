@@ -144,3 +144,92 @@ $$
 \ddot \xi^i +
 \Gamma^i_{jk} \dot \xi^j \dot \xi^k = 0
 $$
+
+## Dinâmica do contínuo
+
+### Região ocupada por um corpo extenso
+
+A seguinte construção é conhecida como hipótese do contínuo e
+é bastante útil para a descrição macroscópica de certas entidades físicas.
+Para começar, quer-se descrever um _corpo extenso_ que ocupa uma região
+$\Omega_t\subset\mathcal V_3$ do espaço no instante $t$, cada ponto $x\in\Omega_t$
+é considerado, em seu próprio direito, como um corpo, de maneira que o corpo extenso
+é na verdade composto de infinitos corpos pontuais continuamente distribuídos na
+região $\Omega_t$. Esse corpo extenso pode ser um fluido como a água, um gás,
+uma estrela, etc.
+
+Os eventos do corpo extenso são os pontos da região do espaço-tempo definida por
+$$
+\Omega = \{(t, x)\in\mathcal V_4 ~|~ x\in\Omega_t \}.
+$$
+
+### Campo de velocidades
+
+O campo de velocidade do corpo extenso é um campo vetorial
+dependente do tempo
+$\vec u:\Omega\rightarrow T\mathcal V_3$ que descreve a velocidade dos pontos
+do corpo extenso, isto é,
+se $\gamma:\mathbb T\rightarrow \mathcal V_3$ é a trajetória
+de um ponto qualquer do corpo extenso, com $\gamma(t)\in\Omega_{t}$,
+então
+$$
+\frac{d}{dt} \gamma(t) = \vec u(t, \gamma(t)).
+$$
+
+Quando o campo de velocidades é suave essa abordagem define o escoo
+do corpo extenso como como sendo a função
+$\Phi:\Omega\rightarrow\mathcal V_3$ que informa a evolução de
+cada ponto do corpo extenso, isto é,
+$$
+\frac{d}{dt} \Phi_x(t) = \vec u(t, \Phi_x(t)),
+$$
+onde $\Phi_x(t) = \Phi(t, x)$.
+
+### Equação de continuidade
+
+Não é raro que seja de muitíssimo interesse estudar alguma quantidade escalar
+associada ao corpo extenso que esteja distribuida por ele, isto é,
+dada uma função de densidade $\rho:\mathcal V_4\rightarrow\mathbb R$,
+a quantidade $\mu(\Omega_t)$ no instante $t$ é dada por
+$$
+\mu(\Omega_t) = \int_{\Omega_t} \star\rho_t,
+$$
+onde $\star$ é o operador de Hodge definido pela métrica do espaço
+e $\rho_t(x) = \rho(t, x)$.
+A taxa de criação ou destruição
+dessa quantidade por unidade de volume
+num intante $t$ e num ponto $x$
+é denotada por $g(t, x)$, isto é, é modelada por uma dada função
+$g:\mathcal V_4\rightarrow\mathbb R$, de maneira que
+a forma integral da equação de continuidade é
+$$
+\frac{d}{dt} \mu(\Omega_{t}) = \int_{\Omega_{t}} \star g_t,
+$$
+onde $g_t(x) = g(t, x)$.
+De acordo com a regra integral de Leibniz
+$$
+\frac{d}{dt}\int_{\Omega_t} \star\rho_t =
+\int_{\Omega_{t}} \mathcal L_{\vec u_t}(\star\rho_t) +
+\int_{\Omega_{t}}\star\frac{\partial}{\partial t}\rho_t,
+$$
+onde $\mathcal L_{\vec u_t}$ é a derivada de Lie com respeito a
+$\vec u_t$ tal que $\vec u_t(x) = \vec u(t, x)$.
+De acordo com a fórmula mágica de Cartan
+$\mathcal L_{\vec u_t}(\star\rho_t) = d(\vec u_t \lrcorner \star\rho_t) + \vec u_t \lrcorner d(\star\rho_t)$,
+mas desde que $\star\rho_t$ é uma forma de volume tem-se que
+$d(\star\rho_t) = 0$ e usando a identidade
+$\vec u_t \lrcorner \star\rho_t = \star(\rho_t\vec u_t)$
+tem-se
+$$
+\frac{d}{dt}\int_{\Omega_t} \star\rho_t =
+\int_{\Omega_{t}} d\star(\rho_t\vec u_t) +
+\int_{\Omega_{t}}\star\frac{\partial}{\partial t}\rho_t =
+\int_{\Omega_{t}} \star g_t,
+$$
+mas desde que a equação de continuidade deve ser válida em todas as regiões de integração,
+deve-se ter $d\star(\rho_t\vec u_t) + \star\frac{\partial}{\partial t}\rho_t = \star g_t$,
+de forma que ao aplicar o operador de Hodge de ambos os lados obemos
+a forma diferencial da equação de continuidade,
+$$
+\frac{\partial}{\partial t}\rho_t + \star d\star(\rho_t\vec u_t) = g_t.
+$$
