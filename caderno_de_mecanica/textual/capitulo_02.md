@@ -12,9 +12,7 @@ relacionádos à cinemática.
 ### Posição
 
 A posição de um corpo é uma propriedade do corpo
-que é descrita por um observador,
-para isso o observador associa ao corpo
-um ponto no espaço $\mathcal V_3$
+que é descrita por um observador como um ponto no espaço $\mathcal V_3$
 de tal maneira que no instante $t$ a
 posição do corpo é um ponto
 $x(t)\in\mathcal V_3$.
@@ -43,7 +41,7 @@ Em termos algébricos,
 a velocidade $\dot x(t)\in T_{x(t)}(\mathcal V_3)$
 de um corpo no instante $t$ é definida pelo mapa
 $$
-{\dot x:t\mapsto \dot x(t) = \frac{d}{dt} x(t)}.
+{\dot x:t\mapsto \frac{d}{dt} x(t)}.
 $$
 
 Tal como a posição, a velocidade depende do observador e de como
@@ -56,7 +54,7 @@ se o referencial utilizado pelo observador se move.
 Tal é a importância desse simples fato que Einstein chegou a postular
 que "Não existe referencial absoluto", no sentido de que não há meios experimentais
 capazes de determinar se um corpo está em repouso ou movendo-se com respeito
-a um ponto do espaço, mas apenas com respeito a outro corpo.
+a um ponto fixo do espaço, mas apenas com respeito a outro corpo.
 
 ### Cartas do fibrado tangente
 

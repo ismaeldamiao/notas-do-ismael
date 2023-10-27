@@ -3,91 +3,88 @@
 Neste capítulo tomarei nota sobre as leis da mecânica de
 Newton...
 
-Perguntas por resolver?
-* Pq definir o momento como uma 1-forma?
-* É melhor definir energia?
-
-$$
-\theta(X) = p_i X^i
-$$
 
 ## Introdução
 
-Para o estudo da mecânica dos corpos
-é necessário entender, sem definição,
-os conceitos de momento,
-ou quantidade de movimento, e força.
-* **Momento:**
-  O momento linear é uma grandeza que
-  paralela à velocidade que mede a
-  quantidade de movimento de um corpo.
+### Momento
 
-  Em cada instante $t$ o momento linear
-  de um corpo é $p(t)\in T^*\mathcal V_3$.
-* **Força:**
-  Uma força imprimida é uma ação exercida
-  sobre um corpo com o fim
-  de alterar seu estado
-  de repouso ou de movimento geodésico.
-  
-  A força de inércia
-  é aquela pela qual um corpo
-  mantém seu estado
-  de repouso ou de movimento geodésico.
+Sir Isaac Newton observou que em sistemas isolados
+a grandeza $m \dot x$ é conservada, onde $m$ é a massa do corpo,
+essa grandeza ficou conhecida como momento linear.
+Mais tarde verificou-se que também partículas sem massa possuem
+momento linear, assim é conveniente utilizar a abordagem de Sir William Hamilton,
+de que o momento pode ser estudado como um conceito primitivo, tal como a posição.
 
-  A força motora é
-  a resultante das ações das forças
-  imprimidas e de inércia.
+Já os os estudos de Émilie du Châtelet acerca dos trabalhos de Newton mostraram,
+que outra grandeza conservada é a energia cinética $\frac{1}{2} m ||\dot x(t)||^2$.
+A relação momento-energia que daí surge sugere que o momento de um corpo com massa
+associa sua velocidade à sua energia cinética, ou seja, que é de grande utilidade
+modelar o momento $p$ de um corpo com massa como uma forma diferencial.
+Além disso, não por acaso, na teoria de Hamilton o momento surge naturalmente
+como um vetor covariante.
 
-Algumas construções básicas são feitas
-utilizando o conceito primitivo:
-* **Massa:**
-  Em cada instante $t$ a massa de um corpo
-  é a razão entre seu momento e sua velocidade,
-  tal qual definida pelo mapa
-  $$m:t\mapsto\sqrt{\left\vert
-      \frac{\eta^*_{x(t)}(p(t), p(t))}
-      {\eta_{x(t)}(v(t), v(t))}
-  \right\vert}.$$
-  Daí vem a relação momento-velocidade,
-  $$p(t) = m(t) ~ \eta^\flat\circ v(t).$$
-  Note-se que essa relação não necessariamente
-  estabelece uma dualidade entre os fibrados
-  tangente e cotangente.
-* **Sistema de coordenadas em $T^*(\mathcal V_3)$:**
-  O observador (referencial)
-  também consegue definir cartas em
-  ${T^*(V) \subset T(\mathcal V_3)}$,
-  de fato ele pode tomar
-  $$\begin{cases}
-  {p_i:T^*(V)\rightarrow\mathbb R:
-  \sigma\mapsto \sigma
-  \left(\frac{\partial}{\partial x^i}\right)} \\
-  {q^i:T^*(V)\rightarrow\mathbb R:
-  \sigma\mapsto x^i\circ\pi(\sigma)},
-  \end{cases}$$
-  onde
-  $\pi:T^*(\mathcal V_3)\rightarrow\mathcal V_3$
-  é a projeção do fibrado cotangente.
-  Ele chama a função $p_i$ de
-  componente do momento
-  associado à coordenada $x^i$
-  e às funções
-  $q^i$ também chama de coordenadas.
+Assim, o momento é uma propriedade do corpo
+que é descrita por um observador como ponto no fribrado cotangente $T^*\mathcal V_3$
+de tal maneira que no instante $t$ o momento do corpo é um covetor
+$p(t)\in T^*_{x(t)}\mathcal V_3$.
 
-  O momento de um corpo
-  movendo-se na vizinhança do observador é
-  $$p(t) =
-  \sum_{i=1}^3 p_i\circ p(t)
-  ~ dx^i|_{x(t)}.\tag{1}$$
+### Força
+
+No trabalho de Newton é possível distinguir pelo menos
+três tipos de forças.
+A primeira é a _força imprimida_ que é uma ação externa
+execida sobre um corpo com o fim de alterar seu estado
+de repouso ou de movimento geodésico.
+A segunda é a _força de inércia_ que é aquela força
+pela qual um corpo mantém seu estado de repouso ou de movimento geodésico.
+Já a terceira é a _força motora_ que de alguma forma captura a informação
+das duas outras, isto é,
+é a resultante das ações das forças imprimidas e de inércia.
+
+A força imprimida é uma grandeza vetorial e sua representação natural
+é um ponto no fibrado tangente $T\mathcal V_3$,
+a representação das outras duas
+depende a maneira algébrica como as leis de Newton são expressas,
+neste caderno de notas elas são representadas por pontos
+no tangente do cotangente $TT^*\mathcal V_3$, seguindo o trabalho de Hamilton.
+
+### Cartas do fibrado cotangente
+
+Utilizando as coordenadas o observador consegue definir uma carta no
+fibrado cotangente e assim descrever os covetores na sua vizinhança
+utilizando seis números reais, três para informar a posição onde o vetor é cotangente
+e três para informar a projeção do vetor em uma dada direção.
+De fato basta definir
+$$\begin{cases}
+{p_i:\bar\pi^{-1}(V)\rightarrow\mathbb R:
+\sigma\mapsto \sigma
+\left(\hat x_i\right)} \\
+{q^i:\bar\pi^{-1}(V)\rightarrow\mathbb R:
+\sigma\mapsto x^i\circ\bar\pi(\sigma)},
+\end{cases}$$
+onde
+onde $\bar\pi:T(\mathcal V_3)\rightarrow\mathcal V_3$
+é a projeção do fibrado cotangente.
+Ele chama a função $p_i$ de
+i-ésima componente do vetor cotangente
+associada à coordenada $x^i$
+e às funções
+$q^i$ também chama de coordenadas.
+
+Utilizando essa carta, o momento de um corpo
+movendo-se na vizinhança do observador é
+$$
+p(t) =
+\sum_{i=1}^3 p_i\circ p(t)
+~ \hat x^i|_{x(t)}.
+$$
 
 ## As leis de Newton
 
-**Postulado: Princípio de inércia**
-> *Todo corpo matém, no que depende dele, seu estado de repouso ou
-> movimento geodésico.*
+### Postulado: Princípio de ação e reação
 
-**Postulado: Princípio fundamental da dinâmica**
+### Postulado: Princípio fundamental da dinâmica
+
 > *A mudança no momento é proporcional à força motora imprimida.*
 
 Assim, em cada instante $t$ a força motora $F(t)\in TT^*\mathcal V_3$
@@ -96,6 +93,27 @@ pela equação
 $$
 \frac{d}{dt}\gamma^\flat(t) = F(t).
 $$
+
+### Postulado: Princípio de inércia
+
+> *Todo corpo matém, no que depende dele, seu estado de repouso ou
+> movimento geodésico.*
+
+### Proposição: Lei de conservação de energia
+
+
+
+### Proposição: Lei de conservação do momento
+
+Utilizando as leis de newton, deve-se mostrar que
+"um corpo movendo-se livremente conserva o módulo do seu momento".
+
+Prova:
+Defina a massa do corpo no intante $t$ como
+$$
+m(t) = \frac{||p(t)||_{x(t)}}{||\dot x(t)||_{x(t)}}
+$$
+TODO: Complete this proof.
 
 ## Expressão local das leis de Newton
 
