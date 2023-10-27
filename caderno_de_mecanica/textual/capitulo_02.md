@@ -218,18 +218,21 @@ De acordo com a fórmula mágica de Cartan
 $\mathcal L_{\vec u_t}(\star\rho_t) = d(\vec u_t \lrcorner \star\rho_t) + \vec u_t \lrcorner d(\star\rho_t)$,
 mas desde que $\star\rho_t$ é uma forma de volume tem-se que
 $d(\star\rho_t) = 0$ e usando a identidade
-$\vec u_t \lrcorner \star\rho_t = \star(\rho_t\vec u_t)$
+$\vec u_t \lrcorner \star\rho_t = \star(\rho_t\eta^\flat(\vec u_t))$
 tem-se
 $$
 \frac{d}{dt}\int_{\Omega_t} \star\rho_t =
-\int_{\Omega_{t}} d\star(\rho_t\vec u_t) +
+\int_{\Omega_{t}} d\star(\rho_t\eta^\flat(\vec u_t)) +
 \int_{\Omega_{t}}\star\frac{\partial}{\partial t}\rho_t =
 \int_{\Omega_{t}} \star g_t,
 $$
 mas desde que a equação de continuidade deve ser válida em todas as regiões de integração,
-deve-se ter $d\star(\rho_t\vec u_t) + \star\frac{\partial}{\partial t}\rho_t = \star g_t$,
+deve-se ter $d\star(\rho_t\eta^\flat(\vec u_t)) + \star\frac{\partial}{\partial t}\rho_t = \star g_t$,
 de forma que ao aplicar o operador de Hodge de ambos os lados obemos
 a forma diferencial da equação de continuidade,
 $$
-\frac{\partial}{\partial t}\rho_t + \star d\star(\rho_t\vec u_t) = g_t.
+\frac{\partial}{\partial t}\rho_t + \operatorname{div}(\rho_t\vec u_t) = g_t,
 $$
+onde $\operatorname{div}(\rho_t\vec u_t) = \star d\star(\rho_t\eta^\flat(\vec u_t))$
+é o gradiente riemanniano do campo vetorial $\vec J = \rho\vec u$,
+esse campo é chamado de fluxo da quantidade.
