@@ -196,5 +196,5 @@ onde $L:$
 
 (Ver Finsler manifold)
 
-## Relação entre forças e campos vetoriais
+## Mecânica do contínuo
 

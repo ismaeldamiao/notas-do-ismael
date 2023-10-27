@@ -185,54 +185,81 @@ $$
 $$
 onde $\Phi_x(t) = \Phi(t, x)$.
 
+De maneira semelhante também é possível definir uma quadrivelocidade
+$U:\Omega\rightarrow T\mathcal V_4$,
+o escoo $\varphi:\mathbb T\times\mathcal V_4\rightarrow\mathcal V_4$ desse campo
+será simplesmente $\varphi(t, (t, x)) = (t, \Phi(t, x))$.
+Esse campo de quadrivelocidades é útil para escrever as equações
+no espaço-tempo na sua forma livre de coordenadas.
+
 ### Equação de continuidade
 
-Não é raro que seja de muitíssimo interesse estudar alguma quantidade escalar
-associada ao corpo extenso que esteja distribuida por ele, isto é,
-dada uma função de densidade $\rho:\mathcal V_4\rightarrow\mathbb R$,
+Uma quantidade escalar distribuida pelo corpo extenso
+é definida da seguinte maneira, dada uma
+função de densidade $\rho:\Omega\rightarrow\mathbb R$,
 a quantidade $\mu(\Omega_t)$ no instante $t$ é dada por
 $$
 \mu(\Omega_t) = \int_{\Omega_t} \star\rho_t,
 $$
 onde $\star$ é o operador de Hodge definido pela métrica do espaço
-e $\rho_t(x) = \rho(t, x)$.
-A taxa de criação ou destruição
-dessa quantidade por unidade de volume
-num intante $t$ e num ponto $x$
-é denotada por $g(t, x)$, isto é, é modelada por uma dada função
-$g:\mathcal V_4\rightarrow\mathbb R$, de maneira que
-a forma integral da equação de continuidade é
-$$
-\frac{d}{dt} \mu(\Omega_{t}) = \int_{\Omega_{t}} \star g_t,
-$$
-onde $g_t(x) = g(t, x)$.
-De acordo com a regra integral de Leibniz
+e em cada instante $t$ a função $\rho_t(x) = \rho(t, x)$ é uma função do espaço.
+A 3-forma diferencial $\star\rho_t$ é
+uma forma de volume no espaço associada a densidade da quantidade $\mu(\Omega_t)$,
+tendo em conta a densidade do próprio espaço.
+
+Utilizando a regra integral de Leibniz obtem-se a seguinte expressão
+para a taxa de variação dessa quantidade por unidade de tempo,
 $$
 \frac{d}{dt}\int_{\Omega_t} \star\rho_t =
 \int_{\Omega_{t}} \mathcal L_{\vec u_t}(\star\rho_t) +
-\int_{\Omega_{t}}\star\frac{\partial}{\partial t}\rho_t,
+\int_{\Omega_{t}}\star\dot\rho_t,
 $$
-onde $\mathcal L_{\vec u_t}$ é a derivada de Lie com respeito a
-$\vec u_t$ tal que $\vec u_t(x) = \vec u(t, x)$.
+onde $\dot\rho_t(x) = \frac{\partial}{\partial t} \rho(t, x)$ e $\vec u_t(x) = \vec u(t, x)$.
 De acordo com a fórmula mágica de Cartan
-$\mathcal L_{\vec u_t}(\star\rho_t) = d(\vec u_t \lrcorner \star\rho_t) + \vec u_t \lrcorner d(\star\rho_t)$,
-mas desde que $\star\rho_t$ é uma forma de volume tem-se que
-$d(\star\rho_t) = 0$ e usando a identidade
-$\vec u_t \lrcorner \star\rho_t = \star(\rho_t\eta^\flat(\vec u_t))$
-tem-se
+$\mathcal L_{\vec u_t}(\star\rho_t) = \vec u_t \lrcorner d(\star\rho_t) + d(\vec u_t \lrcorner \star\rho_t)$,
+onde o primeiro termo é nulo, $d(\star\rho_t) = 0$,
+devido ao fato de que $\star\rho_t$ é uma forma de volume,
+já o segundo termo é melhor escrito usando a identidade
+$\vec u_t \lrcorner \star\rho_t = \star(\rho_t\eta^\flat(\vec u_t)) = \star\eta^\flat(\rho_t\vec u_t)$.
+Assim
 $$
-\frac{d}{dt}\int_{\Omega_t} \star\rho_t =
+\frac{d}{dt} \mu(\Omega_{t}) =
+\int_{\Omega_{t}} d\star\eta^\flat(\rho_t\vec u_t) +
+\int_{\Omega_{t}} \star\dot\rho_t,
+$$
+de maneira que utilizando o teorema de Stokes
+obtem-se a forma integral da equação de continuidade,
+$$
+\frac{d}{dt} \mu(\Omega_{t}) =
+\int_{\partial\Omega_{t}} \star\eta^\flat(\rho_t\vec u_t) +
+\int_{\Omega_{t}} \star\dot\rho_t,
+$$
+isto é, a quantidade $\mu(\Omega_{t})$ apenas varia no tempo quando
+escoa a uma taxa $\rho_t\vec u_t$ pelo bordo do corpo ou quando é criada
+ou destruída dentro do corpo a uma taxa $\dot\rho_t$.
+Seja $g:\Omega\rightarrow\mathbb R$ tal que
+$\frac{d}{dt} \mu(\Omega_{t}) = \int_{\Omega_{t}} \star g_t$,
+com $g_t(x) = g(t, x)$, essa função $g$ informa a digergência da
+densidade no espaço-tempo, de fato a igualando os integrandos em
+$$
 \int_{\Omega_{t}} d\star(\rho_t\eta^\flat(\vec u_t)) +
 \int_{\Omega_{t}}\star\frac{\partial}{\partial t}\rho_t =
-\int_{\Omega_{t}} \star g_t,
+\int_{\Omega_{t}} \star g_t
 $$
-mas desde que a equação de continuidade deve ser válida em todas as regiões de integração,
-deve-se ter $d\star(\rho_t\eta^\flat(\vec u_t)) + \star\frac{\partial}{\partial t}\rho_t = \star g_t$,
-de forma que ao aplicar o operador de Hodge de ambos os lados obemos
-a forma diferencial da equação de continuidade,
+obtem-se forma diferencial da equação de continuidade,
 $$
-\frac{\partial}{\partial t}\rho_t + \operatorname{div}(\rho_t\vec u_t) = g_t,
+\frac{\partial}{\partial t}\rho + \nabla\cdot(\rho\vec u) = g,
 $$
-onde $\operatorname{div}(\rho_t\vec u_t) = \star d\star(\rho_t\eta^\flat(\vec u_t))$
-é o gradiente riemanniano do campo vetorial $\vec J = \rho\vec u$,
+onde $\nabla\cdot(\rho\vec u)(t, x) = \star d\star\eta^\flat(\rho_t\vec u_t)|_x$
+é o divergente espacial do campo vetorial $\vec j = \rho\vec u$,
 esse campo é chamado de fluxo da quantidade.
+
+Sendo $\tilde\eta$ o tensor métrico
+do espaço-tempo, um cálculo utilizando coordendas (fica como exercício)
+mostra que a equação de continuidade acima também pode ser escrita como
+$$
+\operatorname{div}(\rho U) = g,
+$$
+onde $\operatorname{div}(\rho U) = \star d\star\tilde\eta^\flat(\rho U)$
+é o divergente espaço-temporal da quadricorrente $J = \rho U$
+(agora com $\star$ definido usando a métrica do espaço-tempo).
