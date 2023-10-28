@@ -112,6 +112,8 @@ $$
 
 ## Geometria das trajetórias
 
+### Exemplos
+
 ### Geodésicas
 
 Um tipo bastante relevante de trajetória é a que descreve
@@ -130,19 +132,34 @@ $\mathrm v$ com dimensão de velocidade.
 
 Para essa distância a desigualdade de Cauchy–Schwarz é
 $$
-\int_{t_0}^{t_f}
-\sqrt{\eta_{x(t)}(\dot x(t), \dot x(t))} ~ dt
-\le 2|t_f - t_0|
+\left(\int_{t_0}^{t_f}
+\sqrt{\eta_{x(t)}(\dot x(t), \dot x(t))} ~ dt\right)^2
+\le |t_f - t_0|
 \int_{t_0}^{t_f}
 \eta_{x(t)}(\dot x(t), \dot x(t)) ~ dt
 $$
+onde a igualdade claramente vale quando a curva possui velocidade constante e a
+distância é mínima. As equações de Euler-Lagrange para essa curva são
 
-
-
+$$
+\eta_{ij} \frac{\partial}{\partial v^i} v^j - \frac{d}{dt} v^i v^j \frac{\partial}{\partial \xi^k} \eta_{ij} = 0
+$$
 
 $$
 \ddot \xi^i +
 \Gamma^i_{jk} \dot \xi^j \dot \xi^k = 0
+$$
+
+### Aceleração
+
+### Curvatura
+
+Assim como a aceleração, a curvatura é uma medida do quanto
+que a trajetória de um corpo se afasta do movimento geodésico,
+entretanto a curvatura é uma grandeza escalar.
+A curvatura $\kappa(t)$ no instante $t$ é definida por
+$$
+\kappa(t) = \frac{||a(t)||_{x(t)}}{||\dot x(t)||_{x(t)}}.
 $$
 
 ## Dinâmica do contínuo
@@ -240,7 +257,7 @@ ou destruída dentro do corpo a uma taxa $\dot\rho_t$.
 Seja $g:\Omega\rightarrow\mathbb R$ tal que
 $\frac{d}{dt} \mu(\Omega_{t}) = \int_{\Omega_{t}} \star g_t$,
 com $g_t(x) = g(t, x)$, essa função $g$ informa a digergência da
-densidade no espaço-tempo, de fato a igualando os integrandos em
+densidade no espaço-tempo, de fato igualando os integrandos em
 $$
 \int_{\Omega_{t}} d\star(\rho_t\eta^\flat(\vec u_t)) +
 \int_{\Omega_{t}}\star\frac{\partial}{\partial t}\rho_t =
