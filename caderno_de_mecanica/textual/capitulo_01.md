@@ -84,3 +84,11 @@ A 2-forma diferencial $\vec v\lrcorner\mathrm{vol}$...
 $$
 \int_{\partial\Omega_t} \vec v\lrcorner\mathrm{vol} = \int_{\Omega_t} \vec\nabla\cdot\vec v ~ \mathrm{vol}
 $$
+
+### Lema: Regra integral de Leibniz
+
+Seja $\sigma\in \mathfrak X(\mathcal V_4; \Lambda(\mathcal V_3))$
+
+$$
+\frac{d}{dt} \int_{\Omega_t} \sigma = \frac{\partial}{\partial t}
+$$
