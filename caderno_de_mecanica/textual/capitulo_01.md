@@ -36,22 +36,51 @@ de maneira que essa variedade é riemanniana.
 Procurei enunciar esses postulados de maneira que cada afirmação relevante possa ser
 testada experimentalmente.
 
-## Espaço-tempo Aristotélico
+
+
+## Espaço-tempo
+
+### Espaço-tempo Aristotélico
 
 ### Espaço-tempo Galileano
 
 ### Espaço-tempo Lorenziano
 
-### Operadores diferenciais
+## Lá
 
-Seja $\mathcal V_4 = \mathbb T\times\mathcal V_3$ o espaço-tempo.
-A coordenada temporal é a função $t:\mathcal V_4\rightarrow\mathbb R:(s, x)\mapsto s$.
-1. 
+### Coordenada temporal
 
-onde o espaço $\mathcal V_3$ possui um tensor métrico riemanniano $\eta$.
+Seja $\mathcal V_4$ o espaço-tempo.
+A coordenada temporal é a projeção $t:\mathcal V_4\rightarrow\mathbb T$
+que associa a cada evento o instante em que ele ocorre.
+Essa função define um campo vetorial $\hat e_t$ e a forma diferencial $dt$,
+como é usual.
 
-O tensor métrico do espaço-tempo
+Diz-se em um vetor $\vec v\in T\mathcal V_4$ é um vetor no espaço se $dt(\vec v) = 0$,
+isto é, quando não tem componentes na direção do tempo.
+Contudo, um campo vetorial no espaço pode depender do tempo,
+ainda que não tenha componentes na direção do tempo.
+Para fins mmemônicos os vetores no espaço serão denotados com uma seta encima,
+enquanto que os vetores no espaço-tempo serão denotados por letras maiúsculas,
+sem seta.
 
+### Tensor métrico
 
-$\star_{\eta}$ denota 
+### Forma de volume
 
+$$
+\mathrm{vol} = \hat e_t \lrcorner \mathrm{vol}_{\eta}
+$$
+
+### Divergente
+
+$$
+\vec\nabla\cdot\vec v ~ \mathrm{vol} = \mathcal L_{\vec v} \mathrm{vol}
+$$
+
+A 2-forma diferencial $\vec v\lrcorner\mathrm{vol}$...
+
+É possivel ainda verificar o teorema da digergência:
+$$
+\int_{\partial\Omega_t} \vec v\lrcorner\mathrm{vol} = \int_{\Omega_t} \vec\nabla\cdot\vec v ~ \mathrm{vol}
+$$
