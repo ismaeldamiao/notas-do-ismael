@@ -99,6 +99,23 @@ $$
 > *Todo corpo matém, no que depende dele, seu estado de repouso ou
 > movimento geodésico.*
 
+### Força imprimida
+
+A força imprimida sobre um corpo é obtida tomando a diferença entre a força resultante
+e a força de inércia definida pela métrica, isto é,
+
+$$
+F_I(t) = F_R(t) - F_G(t).
+$$
+
+Note que, desde que $\bar\pi\circ p(t) = x(t)$,
+a regra da cadeia impõe à força resultante a condição
+$\dot x(t) = D\bar\pi\circ F_R(t)$ que é similar à condição para
+um campo vetorial no fibrado tangente definir uma
+equação de movimento de segunda ordem.
+Claro está que a força imprimida é para a mecânica o
+equivalente ao que é a aceleração para a cinemática.
+
 ### Proposição: Lei de conservação de energia
 
 
@@ -115,7 +132,7 @@ m(t) = \frac{||p(t)||_{x(t)}}{||\dot x(t)||_{x(t)}}
 $$
 TODO: Complete this proof.
 
-## Expressão local das leis de Newton
+### Expressão local das leis de Newton
 
 Seja...
 $\eta^{ij} = \eta^*(dx^i, dx^j)$...
@@ -170,7 +187,7 @@ $$
 $$
 Q.E.D.
 
-## Equações do movimento geodésico
+### Equações do movimento geodésico
 
 >   Para um corpo movendo-se na
 >   vizinhança de um observador
@@ -178,7 +195,7 @@ Q.E.D.
 >   sistema de coordenadas arbitrário
 >   tem-se que
 
-## A força de inércia
+### A força de inércia
 
 Sob a hipótese de que um corpo está livre da ação de forças imprimidas,
 de acordo com o princípio fundamental da dinâmica
@@ -195,6 +212,29 @@ $$
 onde $L:$
 
 (Ver Finsler manifold)
+
+## Formalismo Hamiltoniano
+
+Seja $\mathcal P$ uma variedade suave.
+
+### Definição: Forma simplética
+
+### Definição: Campos simpléticos e hamiltonianos
+
+Um campo vetorial $X:\mathcal P\rightarrow T\mathcal P$
+é simplético se preserva a estrutura simplética do espaço, isto é,
+
+$$
+\mathcal L_X\omega = 0.
+$$
+
+Note que um campo vetorial é simplético se
+$X\lrcorner\omega$ é uma forma fechada, $X\lrcorner\omega = 0$.
+O campo será dito hamiltoniano se essa forma for exata, isto é,
+se existir uma função $H:\mathcal P\rightarrow\mathbb R$ tal que
+$X\lrcorner\omega = dH$.
+
+Exemplos:
 
 ## Mecânica do contínuo
 

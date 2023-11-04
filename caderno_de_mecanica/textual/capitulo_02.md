@@ -226,7 +226,7 @@ que possui as seguintes propriedades:
 * $\forall_{s\in]-\epsilon, \epsilon[} (\tilde\gamma_s(\tau_f) = \gamma(\tau_f))$.
 
 Uma trajetória é crítica para a ação se
-$\frac{d}{ds}\mathscr A_L(\tilde\gamma_s) = 0$.
+$\left.\frac{d}{ds}\right\vert_{s = 0}\mathscr A_L(\tilde\gamma_s) = 0$.
 
 ### Proposição: Equações de Euler-Lagrange
 
@@ -249,6 +249,9 @@ $$
 
 O lagrangiano é dito regular se esse mapa é um difeomorfismo local
 e hiper-regular se é um difeomorfismo.
+
+Exemplos:
+* $\mathbb FL = \eta^{\flat}$.
 
 ## Dinâmica do contínuo
 
