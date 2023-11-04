@@ -65,12 +65,12 @@ e três para informar a projeção do vetor em uma dada direção.
 De fato basta definir
 $$
 \begin{cases}
-{v^i:\pi^{-1}(V)\rightarrow\mathbb R:X\mapsto dx^i(X)} \\
+{v^i:\pi^{-1}(V)\rightarrow\mathbb R:X\mapsto \hat x^i|_{\pi(X)}(X)} \\
 {\xi^i:\pi^{-1}(V)\rightarrow\mathbb R:X\mapsto x^i\circ\pi(X)},
 \end{cases}
 $$
 onde $\pi:T(\mathcal V_3)\rightarrow\mathcal V_3$
-é a projeção do fibrado tangente.
+é a projeção do fibrado tangente no espaço.
 Ele chama a função $v^i$ de
 i-ésima componente do vetor tangente
 associada à coordenada $x^i$
@@ -86,29 +86,10 @@ $$
 $$
 onde $\dot x^i(t) = \frac{d}{dt} x^i\circ x(t)$.
 
-### Aceleração
-
-Desde que o espaço possui uma estrutura riemanniana
-$(\mathcal V_3, \eta)$, no instante $t$ pode ser definido
-um _vetor aceleração_ utilizando a conexão de Levi-Civita
-acossiada à métrica do espaço.
-Assim o vetor aceleração $a(t)$ no instante $t$ é definido como
-$$
-a(t) = \nabla_{D_t} ~ \dot x(t),
-$$
-onde o vetor "derivada temporal" é localmente dado por
-$$
-D_t =
-\sum_{i=1}^3 v^i
-~ \hat x_i.
-$$
-
-### Problemas de interesse
-
-* Problema 1.  
-  Dadas as componentes $\dot x^i(t)$ da velocidade de um corpo, determinar sua trajetória.
-* Problema 2.  
-  Dadas as componentes $a^i(t)$ aceleração de um corpo, determinar sua trajetória.
+É importante observar que se o observador não estiver em repouso então seu referencial
+pode ser dependente do tempo, de maneira que toda a discussão
+deve ser feita no espaço-tempo $\mathcal V_4 = \mathbb T\times\mathcal V_3$,
+adicionando à carta acima mais uma coordenada referente à dimensão extra.
 
 ## Geometria das trajetórias
 
@@ -150,7 +131,44 @@ $$
 \Gamma^i_{jk} \dot \xi^j \dot \xi^k = 0
 $$
 
+### Equação do movimento geodésico
+
+De volta à motivação para introdução do formalismo lagrangiano,
+definindo o legrangiano associado à métrica por
+
+$$
+L_{\eta}(X) = \frac{1}{2}\eta_{\pi(X)}(X, X),
+$$
+
+...
+
+$$
+D_G\lrcorner d\theta - dL_{\eta} = 0
+$$
+
+### Equações de movimento não geodésico
+
+Uma equação de movimento de segunda ordem,
+nos moldes do que foi visto nessa sessão,
+pode ser definida como uma equação da forma
+
+$$
+\frac{d}{dt} \dot x(t) = X\circ\dot x(t),
+$$
+
+onde $X:T\mathcal V:\rightarrow TT\mathcal V$
+é algum campo vetorial no espaço tangente
+tal que $D\pi(X(v)) = v$, essa condição é necessária
+para que a regra da cadeia, $\dot x(t) = D\pi\circ\ddot x(t)$, seja válida.
+
 ### Aceleração
+
+A aceleração de uma curva governada por uma equação de movimento de segunda ordem,
+é definida como a diferença entre a equação de segunda ordem e
+a equação da geodésica, isto é,
+$$
+A = D - D_G.
+$$
 
 ### Curvatura
 
@@ -161,6 +179,76 @@ A curvatura $\kappa(t)$ no instante $t$ é definida por
 $$
 \kappa(t) = \frac{||a(t)||_{x(t)}}{||\dot x(t)||_{x(t)}}.
 $$
+
+## Formalismo Lagrangiano
+
+Motivados pela busca das equações da geodésica somos levados a estudar
+as integrais que queremos minimizar em um aspecto mais geral,
+o que dá origem ao formalismo lagrangiano para o estudo do cálculo de variações.
+
+Nesta sessão considere que $\mathcal V$ é uma variedade suave.
+
+### Definição: Lagrangiano
+
+Um lagrangiano autônomo é uma função suave $L:T\mathcal V\rightarrow\mathbb R$.
+
+Exemplos:
+* Dado um tensor (pseudo) métrico $\eta$ definido em $\mathcal V$ e uma função
+  $V:\mathcal V\rightarrow\mathbb R$, define-se o lagrangiano
+  $L(X) = \frac{1}{2}\eta_{\pi(X)}(X, X) - V\circ\pi(X)$.
+* Dada uma 1-forma diferencial $\sigma\in\mathfrak X(\mathcal V; \Lambda^1\mathcal V)$,
+  define-se o lagrangiano $L_{\sigma}(X) = \sigma|_{\pi(X)}(X)$.
+
+### Definição: Ação
+
+A ação $\mathscr A_L(\gamma)$ associada a esse lagrangiano
+sobre a curva $\gamma:[\tau_0, \tau_f]\rightarrow\mathcal V$
+é definida por
+
+$$
+\mathscr A_L(\gamma) = \int_{\tau_0}^{\tau_f}
+L\circ\dot\gamma(\tau) ~ d\tau,
+$$
+
+onde $\dot\gamma(\tau) = \frac{d}{d\tau}\gamma(\tau)$.
+
+Exemplos:
+* O comprimento de arco $\int_{\tau_0}^{\tau_f} \sqrt{|\eta_{\gamma(t)}(\dot\gamma(t), \dot\gamma(t))|} ~ d\tau$.
+* A energia da curva $\frac{1}{2}\int_{\tau_0}^{\tau_f} \eta_{\gamma(t)}(\dot\gamma(t), \dot\gamma(t)) ~ d\tau$.
+
+### Definição: Perturbação na ação
+
+Uma perturbação na ação é uma função
+${\tilde\gamma:]-\epsilon, \epsilon[\times[\tau_0, \tau_f]\rightarrow\mathcal V:(s,\tau)\mapsto\tilde\gamma_s(\tau)}$
+que possui as seguintes propriedades:
+* $\forall_{\tau\in [\tau_0, \tau_f]} (\tilde\gamma_0(\tau) = \gamma(\tau))$
+* $\forall_{s\in]-\epsilon, \epsilon[} (\tilde\gamma_s(\tau_0) = \gamma_s(\tau_0))$
+* $\forall_{s\in]-\epsilon, \epsilon[} (\tilde\gamma_s(\tau_f) = \gamma(\tau_f))$.
+
+Uma trajetória é crítica para a ação se
+$\frac{d}{ds}\mathscr A_L(\tilde\gamma_s) = 0$.
+
+### Proposição: Equações de Euler-Lagrange
+
+Uma trajetória é crítica para a ação se
+satisfaz às equações de Euler-Lagrange dadas por
+
+$$
+\left.\frac{\partial}{\partial\xi^i}\right\vert_{\dot\gamma(\tau)} L -
+\frac{d}{d\tau}\left.\frac{\partial}{\partial v^i}\right\vert_{\dot\gamma(\tau)} L = 0.
+$$
+
+### Definição: Derivada de fibra
+
+A derivada de fibra do lagrangiano é o mapa
+$\mathbb FL:T\mathcal V\rightarrow T^*\mathcal V$ definido por
+
+$$
+\mathbb FL(X)(Y) = \lim_{h\to 0}\frac{1}{h} [L(X + hY) - L(X)].
+$$
+
+O lagrangiano é dito regular se esse mapa é um difeomorfismo local
+e hiper-regular se é um difeomorfismo.
 
 ## Dinâmica do contínuo
 

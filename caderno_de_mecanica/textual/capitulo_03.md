@@ -58,7 +58,7 @@ De fato basta definir
 $$\begin{cases}
 {p_i:\bar\pi^{-1}(V)\rightarrow\mathbb R:
 \sigma\mapsto \sigma
-\left(\hat x_i\right)} \\
+\left(\hat x_i|_{\bar\pi(\sigma)}\right)} \\
 {q^i:\bar\pi^{-1}(V)\rightarrow\mathbb R:
 \sigma\mapsto x^i\circ\bar\pi(\sigma)},
 \end{cases}$$
