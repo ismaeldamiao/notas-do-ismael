@@ -1,0 +1,130 @@
+\chapter{Sistema Formal}
+
+A fim de comunicar o conhecimento deve-se necessariamente
+fazer usa da linguagem.
+Com o objetivo de melhor expressar os conceitos desejados
+pode-se inclusive conceber uma linguagem com o fim de
+expressar esses conceitos.
+
+A linguagem que escolhi para o discurso desse livro tem suas bases
+na lógica clássica,
+para que possa gozar também do privilégio do cálculo
+tal lógica será expressada (em partes) por meio de um sistema formal.
+Esses serão os recursos linguísticos dos quais farei uso.
+
+% %%%%%%%%%%%%
+% SECTION
+% %%%%%%%%%%%%
+\section{Proposições}
+
+O ponto de partida da lógica clássica é o estudo das proposições,
+uma proposiçao é uma fórmula que pode ser verdadeira (V) ou falsa (F).
+Tome por exemplo as proposições abaixo.
+
+\begin{itemize}
+   \item[$\varphi_1$:] Minha gata mia.
+   \item[$\varphi_2$:] Essa equação é linear.
+\end{itemize}
+
+\noindent
+A primeira proposição é verdadeira, o sei por experiência,
+enquanto que a segunda sepende da equação que nos é desconhecida,
+suponha que a equação seja a Lei de Faraday então a proposição é falsa.
+Note que no vernáculo existem fórmulas que não são proposições,
+por exemplo:
+
+\begin{itemize}
+   \item[\varphi_3] Onde está o gato?
+   \item[\varphi_4] Resolva essa integral.
+\end{itemize}
+
+% %%%%%%%%%%%%
+% SECTION
+% %%%%%%%%%%%%
+\section{Predicados}
+
+% %%%%%%%%%%%%
+% SECTION
+% %%%%%%%%%%%%
+\section{Quantificadores}
+
+% %%%%%%%%%%%%
+% SECTION
+% %%%%%%%%%%%%
+\section{Sistema Formal}
+
+Nesta seção exponho as regras gramaticais da linguagem formal
+que irei utilizar.
+Utilizo a letra grega $\varphi$ (possivelmente com subindices)
+para representar fórmulas na linguagem,
+já a letra grega $\sigma$
+(possivelmente com subindices ou em maiúsculo, $\Sigma$)
+uso para representar simbolos no alfabeto que serão chamados de termos,
+os termos se destinam a representar sujeitos, predicados e variáveis.
+Reservo para o alfabeto o simbolo $\in$
+para representar a relação de pertinência ou partícula preposicional,
+reservo também o símbolo $\uparrow$ para representar
+a operação de negação da conjunção
+e o símbolo $\forall$ para representar o quantificador existencial,
+outros símbolos são reservados mais adiante para abreviações.
+A linguagem utiliza as seguintes regras gramaticais:
+
+\begin{itemize}
+   \item
+      Se $\varphi_1$ e $\varphi_2$ forem fórmulas então
+      $(\varphi_1\uparrow\varphi_2)$ também será uma fórmula.
+   \item
+      Se $\sigma$ e $\Sigma$ forem termos então $(\sigma\in\Sigma)$
+      será uma fórmula.
+   \item
+      Se $\varphi$ for uma fórmula e $\sigma$ for um termo então
+      $\forall_{\sigma}\varphi$ será uma fórmula.
+
+   \item[$\uparrow\mathtt I$:] Introdução do $\uparrow$
+   
+      Infere-se $(\varphi_1\uparrow\varphi_2)$
+      quando $\varphi_1$ pode ser inferido de $(\varphi_2\uparrow\varphi_2)$.
+
+      $
+         \{\{\varphi_1\} \vdash (\varphi_2\uparrow\varphi_2)\} \vdash
+         (\varphi_1\uparrow\varphi_2)
+      $
+
+   \item[$\uparrow\mathtt E$:] Eliminação do $\uparrow$
+   
+      Infere-se $(\varphi_2\uparrow\varphi_2)$
+      a partir de $\varphi_1$ e de $(\varphi_2\uparrow\varphi_1)$.
+
+      $
+         \{\varphi_1, (\varphi_2\uparrow\varphi_1)\} \vdash
+         (\varphi_2\uparrow\varphi_2)
+      $
+
+   \item[$\uparrow\uparrow\mathtt E$:] Eliminação do duplo $\uparrow$
+
+      Infere-se $\varphi_2$
+      a partir de $\varphi_1$ e de
+      $((\varphi_2\uparrow\varphi_2)\uparrow\varphi_1)$.
+
+      $
+         \{\varphi_1, ((\varphi_2\uparrow\varphi_2)\uparrow\varphi_1)\}\vdash
+         \varphi_2
+      $
+
+   \item[$\exists\mathtt I$:] Generalização existencial
+
+      Infere-se $\exists_{\sigma_2} (\sigma_2\in\Sigma)$
+      a partir de $(\sigma_1\in\Sigma)$.
+
+      $\{(\sigma_1\in\Sigma)\}\vdash \exists_{\sigma_2} (\sigma_2\in\Sigma)$
+
+      \item[$\exists\mathtt E$] Instanciação existencial
+
+      Infere-se $\varphi$ a partir de $\exists_{\sigma_2} (\sigma_2\in\Sigma)$
+      quando $\varphi$ também pode ser inferido a partir de $(\sigma_1\in\Sigma)$.
+
+      $
+         \{\exists_{\sigma_1} (\sigma_1\in\Sigma),
+         \{\sigma_2\in\Sigma\}\vdash\varphi\}\vdash\varphi
+      $
+\end{itemize}
