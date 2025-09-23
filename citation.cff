@@ -3,7 +3,7 @@ message: "If you use this software, please cite it as below."
 authors:
 - family-names: "F. dos Santos"
   given-names: "Ismael F."
-title: "notas-do-ismael"
+title: "Notas do Ismael"
 version: 1.0.0
 date-released: 2023-12-06
 url: "https://github.com/ismaeldamiao/notas-do-ismael"
