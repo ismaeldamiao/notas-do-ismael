@@ -28,7 +28,7 @@ Cada documento possui um *script* `Make.sh` na raíz de seu respectivo diretóri
 Para compilar o documento basta executar esse *script*.
 
 > [!NOTE]
-> Note que você precisará do comando `latexmk` e uma distribuição LaTeX instalada.
+> Você precisará do comando `latexmk` e uma distribuição LaTeX instalada.
 
 ```sh
 sh Make.sh

@@ -7,3 +7,9 @@
 \declaretheorem[style=plain,name=Teorema,qed=\textnormal{\textemdash}]{teorema}
 \declaretheorem[style=plain,name=Axioma,qed=\textnormal{\textemdash}]{axioma}
 \declaretheorem[style=plain,name=Lei,qed=\textnormal{\textemdash}]{lei}
+\declaretheorem[style=definition,name=Exemplo,qed={ }]{exemplo}
+
+\usepackage{tcolorbox}
+\tcolorboxenvironment{axioma}{colback=red!10,colframe=red!35!black}
+\tcolorboxenvironment{teorema}{colback=blue!10,colframe=blue!35!black}
+\tcolorboxenvironment{exemplo}{colback=gray!10,colframe=gray!35!black}
