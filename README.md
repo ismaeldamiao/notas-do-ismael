@@ -33,3 +33,14 @@ Para compilar o documento basta executar esse *script*.
 ```sh
 sh Make.sh
 ```
+
+## Licença
+
+Todos os documentos publicados neste repositório são livre e de código aberto,
+para mais detalhes confira a [licença](LICENSE).
+
+## Contribuindo
+
+Caso encontre algum erro grave nos documentos por favor escreva para
+[ismaellxd@gmail.com](mailto:ismaellxd@gmail.com).  
+Caso queira fazer uma doação monetária utilize a chave PIX `ismaellxd@gmail.com`.
